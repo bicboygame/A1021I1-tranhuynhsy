@@ -1,0 +1,7 @@
+//[Bài tập] Mô tả thuật toán chuyển đổi tiền tệ
+BEGIN
+	INPUT moneyUSD
+	convert $1 = 23000 VNĐ
+	DISPLAY	moneyVND
+END
+
