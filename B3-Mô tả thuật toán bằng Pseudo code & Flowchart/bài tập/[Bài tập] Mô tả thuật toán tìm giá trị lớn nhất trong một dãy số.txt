@@ -1,0 +1,14 @@
+//Mô tả thuật toán tìm giá trị lớn nhất trong một dãy số
+BEGIN
+	INPUT N
+	INPUT a1,a2,a3...aN (i<n)
+	consider max = a1, i <-2
+		IF i>N
+		DISPLAY max
+		ELSE ai > max
+			DISPLAY max = ai
+		while i= i+1
+		DO
+			DISPLAY max
+		END IF
+END

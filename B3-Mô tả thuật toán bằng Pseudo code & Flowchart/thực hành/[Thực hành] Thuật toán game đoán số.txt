@@ -1,0 +1,8 @@
+BEGIN
+	INPUNT N là số được sinh số ngẫu nhiên trong khoảng 0-9
+	INPUT M
+	IF (N==M)
+	Display "YES"         
+	ELSE             
+    Display "NO" 
+End
