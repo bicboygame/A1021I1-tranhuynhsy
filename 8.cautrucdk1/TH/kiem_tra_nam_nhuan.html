@@ -31,8 +31,8 @@
     let year = parent(prompt("nhap vao year"))
     let isLeapYear = false
 
-    let isDivisibleBy4 = year % 4 == 0
-    if (isDivisibleBy4){
+    let isDivisibleBy4 = year % 4 == 0 //số học - so sánh - login( and .. ) - gán
+    if (isDivisibleBy4) {
         let isDivisibleBy100 = year % 100 == 0
         if (isDivisibleBy100) {
             let isDivisibleBy400 =year % 400 == 0
@@ -48,7 +48,7 @@
     } else {
         alert(year + " is NOT a leap year")
     }
-
+    document.write()
     // if (year % 4 == 0) {
     //     if (year % 100 == 0) {
     //         if (year % 400 == 0) {
@@ -65,4 +65,3 @@
 </script>
 
 </body>
-</html>
