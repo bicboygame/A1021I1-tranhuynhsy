@@ -2,38 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--    <style>-->
+<!--        table{-->
+<!--            padding: 8px;-->
+<!--            width: 50%;-->
+<!--            text-align: center;-->
+<!--        }-->
+<!--        th,td{-->
+<!--            padding: 10px;-->
+<!--        }-->
+<!--    </style>-->
+    <style>
+        table{
+            padding: 8px;
+            witdth: 50%;
+            text-algin: center;
+        }
+
+        th,td{
+            padding: 10px;
+        }
+
+    </style>
+
 </head>
 <body>
-<!--<form>-->
-<!--    <h3>Amount</h3>-->
-<!--    <input type="number" name="a"/>-->
-<!--    <h3>From Currency</h3>-->
-<!--    <select name = "dropdown">-->
-<!--        <option value = "VND" selected>VND</option>-->
-<!--        <option value = "USD">USD</option>-->
-<!--    </select>-->
-<!--    <h3>To Currency</h3>-->
-<!--    <select name = "dropdown">-->
-<!--        <option value = "USD" selected>USD</option>-->
-<!--        <option value = "VND">VND</option>-->
 
-<!--</form>-->
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td>
+                <label for="inputMoney"></label>
+                <input type="text" id="inputMoney" size="20">
+            </td>
+            <td>
+                <select name="" id="fromCurency">
+                    <option value="">Chọn</option>
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <select name="" id="toCurrency">
+                    <option value="">Chọn</option>
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <button type="button" onclick="myMoney()">Convert</button>
+            </td>
+        </tr>
 
-<table class="alignC" width = "750" height = "250">>
-    <tr>
-        <th>Amount</th>
-        <th>From Currency</th>
-        <th>To Currency</th>
-    </tr>
-    <tr>
-        <td select name ="dropdown">{
-            <option value = "VND" selected>VND</option>
-            <option value = "USD">USD</option>
+    </table>
+    <label for="">Chuyển Đổi:</label>
+    <label for="" id="demo"></label>
+    <script>
+
+
+
+        function myMoney() {
+            let result;
+            let money =parseInt(document.getElementById('inputMoney').value);
+            let fCurrency = document.getElementById('fromCurency').value;
+            let tCurrency = document.getElementById('toCurrency').value;
+            if (fCurrency == 'VND') {
+                if (tCurrency == 'VND'){
+                    result = money * 1;
+                } else {
+                    result = money / 23000;
+                }
+            } else {
+                if (tCurrency =='VND'){
+                    result = money * 23000;
+                } else {
+                    result = money * 1;
+                }
             }
+            document.getElementById('demo').innerHTML = parseFloat(result).toFixed(7);
+        }
 
-        </td>
-    </tr>
-</table>
+
+
+    </script>
 </body>
 </html>
+
