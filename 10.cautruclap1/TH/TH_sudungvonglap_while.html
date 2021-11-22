@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Thực hành] Sử dụng vòng lặp while</title>
+</head>
+<body>
+<script>
+    //Bài 1: Viết chương trình nhận vào một số từ hộp thoại, việc nhập kết thúc khi người dùng nhập vào giá trị -1. Mỗi giá trị nhập được sẽ được hiển thị ra và thực hiện tính tổng các giá trị đó
+    let num = parseInt(prompt('Enter a number'));
+    let tong = 0;
+    //
+    while (num != -1) {
+        // chú ý vòng đi của while rất khác với for , ở đây nó đi từ giá biến let =num dòng 10 và tính tổng
+        tong += num;
+        // in ra giá trị num đầu tiên
+        document.write(num + '<br/>')
+        // nhập lại giá trị num, nếu num vẫn đúng thì tiếp tục lập
+        num = parseInt( prompt('enter a number'));
+        // nếu ta để num = parseInt( prompt('enter a number')) lên dòng 14 thì nó sẻ mất biến num (let=num) và ko tính tổng
+    }
+    // khi kết thúc vòng lập thì hãy in ra giá trị tong, vì nếu để tong len dòng 20 thì nó sẻ thêm vào giá tri num = -1
+    document.write("tong cac so la :" + tong);
+
+
+    // let num = parseInt(prompt('nhập số bất kỳ'));
+    // let total = 0;
+    // while (num != -1) {
+    //
+    //     total = total + num;
+    //     num = parseInt(prompt('nhập số bất kỳ'));
+    //
+    // }
+    // alert (total);
+
+    // let i = 1;
+    //
+    // while (i < 100) {
+    //     //phân thân vòng lặp
+    //     document.write("<hr width = " + i + " %>");
+    //     i++;
+    // }
+</script>
+
+</body>
+</html>

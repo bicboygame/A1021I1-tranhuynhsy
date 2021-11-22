@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    // Bài 1: Sử dụng vòng lặp để đếm từ 1 đến 100. Khi số là 99, hiển thị hộp thoại thông báo là đã hoàn thành.
+    // let i;
+    // for (i = 1 ; i<=100; i++ ) {
+    //
+    //         if ( i ==99 ) {
+    //             break;
+    //
+    //         }
+    //     alert("đây là số 99")
+    // }
+    //Bài 2: Sử dụng hàm prompt() để lấy thông tin nhiệt độ hiện tại được nhập bởi người truy cập.
+    //Nếu nhiệt độ nhập vào trên 100, yêu cầu người dùng giảm nhiệt độ. Nếu nhiệt độ dưới 20, yêu cầu người dùng tăng nhiệt độ.
+    // bài toán này ta cần xác định 2 yêu cầu, 1 là c > 100 hoặc 1 < 20 là thoát yêu vòng lặp,
+    //ta ko biết trước số vòng lặp thì nên sử dụng while
+
+    // do {
+    //         c = number(prompt('Nhập nhiệt độ'));
+    //         if (c > 100){
+    //             alert('Xin hay giảm nhiệt độ');
+    //         }
+    //         else if (c<20){
+    //             alert('Xin hãy tăng nhiệt độ');
+    //         }
+    //         else {
+    //             alert('Nhiệt độ của bạn đang ở mức bình thường');
+    //         }
+    //     }
+    //     while (c!==0)
+
+
+    // let c = Number(prompt("Nhập vào nhiệt độ"))
+    // while (c !== 0){
+    //     if(c <20){
+    //         alert("Nhiệt độ quá lạnh")
+    //         c = Number(prompt("Nhập vào nhiệt độ"))
+    //     }else if(c >100){
+    //         alert("Nhiệt độ quá nóng")
+    //         c = Number(prompt("Nhập vào nhiệt độ"))
+    //     }else {
+    //         alert("Nhiệt độ bình thường")
+    //     }
+    // }
+//Bài 3: Hiển thị ra 20 số trong dãy fibonacci đầu tiên
+//     let a = 0;
+//     let b = 1;
+//     let c = a + b ;
+//     document.write(a +"<br/>" + b +'<br/>');
+//     for (i = 0; i <18; i++) {
+//         document.write(c +'<br/>')
+//         a= b
+//         b= c
+//         c = a + b
+//     }
+// Bài 4: Tìm số đầu tiên trong dãy fibonacci chia hết cho 5.
+
+    // let a = 0;
+    // let b = 1;
+    // let c = a + b;
+    // count = 0;
+    // while (count < 100 ) {
+    //     count ++
+    //     c = a + b;
+    //     a = b;
+    //     b = c;
+    //     if (c%5==0) {
+    //         alert("số đầu tiên chia hết cho 5 là: " + c);
+    //         break;
+    //     }
+    // }
+
+    //Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.
+    // let a = 0;
+    // let b = 1;
+    // let c = a + b;
+    // let total = 1;
+    // count = 0;
+    // document.write(a + "<br>"+b + '<br>');
+    // for (; count <= 20; count ++) {
+    //
+    //
+    //     c = a + b;
+    //     document.write(c + "<br>");
+    //     a = b;
+    //     b = c;
+    //     total = total + c;
+
+    // document.write(c + "<br>");
+    // total = total + c;
+    // a = b;
+    // b = c;
+    // c = a + b;
+    // }
+    // document.write("Tổng 20 số là: " + total);
+
+    // let a = 0;
+    // let b = 1;
+    // let c= a + b;
+    // let total = 1;
+    // count = 0;
+    // document.write(a + "<br>"+b + '<br>');
+    // for (; count <20; count ++) {
+    //     document.write(c + "<br>");
+    //     a = b;
+    //     b = c;
+    //     total = total + c;
+    //     c = a + b;
+        //chú ý chú ý : 2 biến ở đây là biến total and c thì muốn tính biến total để in ra giá trị cuối cùng
+        //thì ta phải xem lại thử biến c đang ở vòng lặp hiện tại hay trước đó , xem thử nó đã có thây đổi hay chưa
+    // }
+    // document.write("Tổng 20 số là: " + total);
+//Bài 6: Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.
+//     let n = 0;
+//     let tong = 0
+//     for (i = 0 ; i< 30;) {
+//         if ( n % 7 ==0) {
+//             document.write( n +'<br>')
+//             tong =tong + n
+//             i++;
+//         }
+//             n++
+//
+//     } document.write('tong cua 30 so chia het cho 7 la :' + tong )
+//Bài 7: Hãy viết một chương trình in ra các số từ 1 đến 100.
+// Nhưng nếu số chia hết cho 3 thì in ra "Fizz", 5 thì in ra "Buzz" thay vì in ra số đó. Và nếu số đó chia hết cho cả 3 và 5 thì in ra chữ "FizzBuzz".
+//     for (let i = 1 ; i<=100 ; i ++) {
+//         if ( i %3==0 && i%5==0) { //if tong vua chia 3 vua chia 5
+//             document.write( i + 'fizzbuzz' + "<br/>")
+//         }else { //de tinh if long nhau duoi
+//             if ( i%3==0) {
+//                 document.write( i +'fizz' + "<br/>")
+//             } else if ( i% 5==0) {
+//                 document.write( i + 'buzz' +"<br/")
+//             }
+//         }
+//     }
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

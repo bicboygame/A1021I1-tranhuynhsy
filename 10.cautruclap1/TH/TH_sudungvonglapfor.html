@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Thực hành] Sử dụng vòng lặp for</title>
+</head>
+<body>
+<!--    <h2>JavaScript Loops</h2>-->
+<!--    <p id ="demo"></p>-->
+<script>
+    //Viết chương trình hiển thị chuỗi “The number is N” 5 lần sử dụng vòng lặp for. Với N sẽ hiển thị từ 0 đến 5.
+    // let i;
+    // let text = '';
+    // for (i = 0 ; i<5;i++){
+    //     text += "The number is N " + i + '<br/>'
+    //     // document.write('The number is N' + i + "<br/>")
+    // }
+    // document.getElementById("demo").innerHTML = text;
+    // let text = "";
+    // let i;
+    // for (i = 0; i < 5; i++) {
+    //     text += "The number is " + i + "<br>";
+    // }
+    // document.getElementById("demo").innerHTML = text;
+
+
+
+
+
+    //Bài 2: Viết chương trình nhập vào một số bất kỳ lớn hơn 0. Tính tổng các phần tử từ 1 đến số vừa nhập vào.
+    let num = prompt('nhap vao 1 so bat ky khac 0')
+    let tong = 0
+    for (i = 1 ; i<=num ; i +=1) {
+        // vd ta nhập vào 2 thì num = 2 thì i<= 2( ở đây thì vẫn đúng đk) nó sẻ tính i = 1 và tổng bằng 1=> tiếp tục nó sẻ i =2 => tổng =3 thì sai dk   tong = tong + i;
+        alert("tong cac so la " + tong);
+        document.write(tong + "</br>")
+    }
+</script>
+</body>
+</html>

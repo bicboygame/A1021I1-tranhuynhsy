@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<script>
+    let soluong = prompt('nhập số lượng số nguyên tố cần in ra');
+    let count = 0;
+    let n = 1;
+    let check;
+    while ( count< soluong) {
+        check = true;
+        for (let j =2 ; j < n; j++) {
+           if (n %j== 0) {
+               check =false
+           }
+        }if (check) {
+            document.write( n +"<br/>")
+            count++;
+        }
+        count++;
+            n++;
+    }
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game doan so</title>
+
+</head>
+
+<body>
+ <div id="demo">
+       <button type="button" onclick="play()">CHƠI NÀO!</button>
+   </div>
+
+<script>
+    //Bài 8: Game đoán số
+    function play(){
+        let min = parseInt(prompt('Nhập khoảng bạn muốn đoán: (số nhỏ nhất) '));
+        let max = parseInt(prompt('Nhập khoảng bạn muốn đoán: (số lớn nhất) '));
+        let a = Math.floor(Math.random() * ((max-min) +1) )+min;
+        alert ('Bạn có 3 lượt đoán,  nếu đoán sai cả 3 lần, trò chơi sẽ bắt đầu lại.:))');
+        alert ('Chúng ta bắt đầu nào');
+        let b;
+        let i=1;
+        do {
+            b = parseInt(prompt('Mời bạn nhập số'));
+            if (b>a){
+                alert('Số bạn nhập hơi lớn');
+                i++;
+            }
+            else if (a>b){
+                alert ('Số bạn nhập hơi thấp');
+                i++
+            }
+            else if (a==b) {
+                alert('Chúc mừng bạn đã đoán chính xác');
+                break;
+            }
+            else{
+                i++;
+            }
+        }while (i<=3)
+            alert('Chúc bạn may mắn lần sau')
+
+
+    }
+</script>
+</body>
+</html>
