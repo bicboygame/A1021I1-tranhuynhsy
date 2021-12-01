@@ -2,10 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>[Bài tập] Câu lệnh switch-case</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-<input type="text" id="inputNum1" size="20">
-<p> Tháng 1 có 31 ngày</p>
+<div>
+<!--    <input type="text" id="month" size="15">-->
+<!--    <button type="button" onclick="clickByMonth()" >Tính số ngày</button><br>-->
+<!--    <label for="" id="demo"></label>-->
+    <input type="text" id="songay1"><input type="button" value="tính số ngày" onclick="tinhsongay()"><br>
+    <p id="hienthi1"></p>
+    <input type="text" id="songay2"><input type="button" value="tính số ngày" onclick="tinhsongay()"><br>
+    <p id="hienthi2"></p>
+</div>
 </body>
 </html>
+<script>
+    // function clickByMonth(){
+    //     let month = parseInt(document.getElementById('month').value);
+    //     switch (month){
+    //         case 2:
+    //             document.getElementById('demo').innerHTML='Tháng 2 có 28,29 ngày';
+    //             break;
+    //         case 1:case 3:case 5:case 7:case 8:case 10:case 12:
+    //             document.getElementById('demo').innerHTML= 'Tháng '+ month + ' có 31 ngày'
+    //             break;
+    //         default:
+    //             document.getElementById('demo').innerHTML= 'Tháng '+ month + ' có 30 ngày'
+    //     }
+    // }
+
+    function tinhsongay() {
+        let songay1 = document.getElementById("songay1").value
+        console.log(songay1)
+        let songay2 = document.getElementById("songay2").value
+
+        switch (songay1.toString() || songay2.toString() ) {
+            case "1":
+            case "3":
+            case "5":
+            case "7":
+            case "8":
+            case "10":
+            case "12":
+                if(songay1){
+                    document.getElementById("hienthi1").innerHTML = "tháng "+songay1+" có 31 ngày"
+                }
+                if(songay2){
+                    document.getElementById("hienthi2").innerHTML = "tháng "+songay2+" có 31 ngày"
+                }
+                break
+            case "2":
+                if(songay1) {
+                    document.getElementById("hienthi1").innerHTML = "tháng " + songay1 + " có 28 hoặc 29 ngày"
+                }
+                if(songay2){
+                    document.getElementById("hienthi2").innerHTML = "tháng " + songay2 + " có 28 hoặc 29 ngày"
+                }
+                break
+            case "4":
+            case "6":
+            case "9":
+            case "11":
+                if(songay1) {
+                    document.getElementById("hienthi1").innerHTML = "tháng " + songay1 + " có 30 ngày"
+                }
+                if(songay2){
+                    document.getElementById("hienthi2").innerHTML = "tháng " + songay2 + " có 30 ngày"
+                }
+                break
+            default:
+                if(songay1) {
+                    document.getElementById("hienthi1").innerHTML = "Bạn chưa nhập tháng hoặc không đúng"
+                }
+                if(songay2){
+                    document.getElementById("hienthi2").innerHTML = "Bạn chưa nhập tháng hoặc không đúng"
+                }
+        }
+    }
+</script>

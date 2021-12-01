@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Luyện tập mảng 02</title>
+</head>
+<body>
+
+<input type="button" value="bai 1" onclick="bai1()"> Viết chương trình khởi tạo mảng 2 chiều
+<!--<br><input type="button" value="Bài 2" onclick="bai2()">in các ký tự trong một mảng theo thứ tự đảo ngược-->
+
+<script>
+
+    function bai1() {
+        let mangso = [
+            [1, 2, 1, 24],
+            [8, 11, 9, 4],
+            [7, 0, 7, 27],
+            [7, 4, 28, 14],
+            [3, 10, 26, 7]
+        ]
+        for (let i=0 ;i<mangso.length; i++){
+            document.write("Rows: "+ (i+1)+ "<br>")
+            for (let j=0; j<mangso[i].length; j++){
+                document.write("\""+mangso[i][j]+ "\" <br>")
+            }
+
+            document.write("<br>")
+        }
+    }
+
+
+    // function bai2() {
+    //     let mang = [1,5,"a","c","d",6,7,"z","w",10,"213"]
+    //     let trunggian
+    //     document.write("Mảng = ["+mang+"]<br>")
+    //     for (let i=0; i<Math.floor((mang.length)/2);i++){
+    //         for (let j = Math.ceil((mang.length)/2); j<(mang.length);j++){
+    //             trunggian = mang[i]
+    //             mang[i] = mang[j]
+    //             mang[j] = trunggian
+    //         }
+    //     }
+    //     document.write("Mảng đổi chiều = ["+mang+"]")
+    // }
+</script>
