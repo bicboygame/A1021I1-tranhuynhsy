@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập tạo và sử dụng hàm 02</title>
+</head>
+<body>
+<input type="button" value="Bài 1" onclick="bai1()"> Tính bình phương <br>
+<input type="button" value="Bài 2" onclick="bai2()"> Tính chu vi và diện tích hình tròn <br>
+
+<script>
+    //bài 1:
+    function binhphuong(so) {
+        let ketqua = so * so
+        return ketqua;
+    }
+
+    function bai1() {
+        let so = prompt("nhập số tính bình phương");
+        let ketqua = binhphuong(so);
+        document.write("Bình phương của" + so +"=" + ketqua)
+    }
+    //bài 2 :
+    function dientich(r,pi) {
+        let S = r*r*pi
+        return S
+    }
+    function chuVi(r, pi) {
+        let C = 2*r*pi
+    }
+
+    function bai2() {
+        const pi = 3.14
+        let r = parseInt(prompt("Nhập bán kính hình tròn"))
+        let chuVi = chuVi(r,pi)
+    }
+</script>
+</body>
+</html>
