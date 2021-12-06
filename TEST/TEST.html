@@ -2,85 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        table{
-            padding: 8px;
-            width: 50%;
-            text-align: center;
-        }
-        th,td{
-            padding: 10px;
-        }
-    </style>
-
+    <title> Xây dựng lớp Date</title>
 </head>
 <body>
-<div>
-    <table>
-        <tr>
-            <th>Amount</th>
-            <th>From Currency</th>
-            <th >To Currency</th>
-        </tr>
-        <tr>
-            <td>
-                <input type="text" id="inputMoney" size="20">
-            </td>
-            <td>
-                <select name="" id="fromCurrency">
-                    <option value="">--Chọn--</option>
-                    <option value="VND">VND</option>
-                    <option value="USD">USD</option>
-                </select>
-            </td>
-            <td>
-                <select name="" id="toCurrency">
-                    <option value="">--Chọn--</option>
-                    <option value="VND">VND</option>
-                    <option value="USD">USD</option>
-                </select>
-            </td>
-            <td>
-                <button type="button" onclick="myMoney();">Convert</button>
-            </td>
-        </tr>
-    </table>
-    <label for="">Kết quả là: </label>
-    <label for="" id="demo"></label>
-</div>
-</body>
-</html>
+
 <script>
+    let myDate = function (day, month, year) {
+        this.day = day
+        this.month = month
+        this.year = year
 
-    function myMoney() {
-        let result;
-        var money = parseInt(document.getElementById('inputMoney').value);
-        var fCurrency = document.getElementById('fromCurrency').value;
-        var tCurrency = document.getElementById('toCurrency').value;
-        if (fCurrency=='VND'){
-            if (tCurrency=='VND'){
-                result = money * 1;
-            }
-            else {
-                result = money / 23000;
-            }
+        this.setDay = function (day) {
+            this.day = day
         }
-        else {
-            if (tCurrency=='VND') {
-                result = money * 23000;
-            }
-            else {
-                result = money * 1;
-            }
+        this.setMonth = function (month) {
+            this.month = month
         }
-        document.getElementById('demo').innerHTML= parseFloat(result).toFixed(6) + '';
+        this.setYear = function (year) {
+            this.year = year
+        }
 
+        this.getDay = function () {
+            return this.day
+        }
+        this.getMonth = function () {
+            return this.month
+        }
+        this.getYear = function () {
+            return this.year
+        }
+
+        this.setDate = function(day, month, year){
+            this.day = day
+            this.month = month
+            this.year = year
+        }
+        this.getDate = function () {
+            alert(this.day+"/"+this.month+"/"+this.year)
+        }
 
     }
 
+    let date_today = new myDate()
+    // let day = date_today.setDay(10)
+    // day = date_today.getDay()
+    // let month = date_today.getMonth()
+    // let year = date_today.getYear()
+    //alert(day+"/"+month+"/"+year)
 
+    let setString = date_today.setDate(5,11,2012)
+    let getString = date_today.getDate()
 
 </script>
+</body>
+</html>
